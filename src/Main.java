@@ -2,7 +2,7 @@
 // click the <icon src="AllIcons.Actions.Execute"/> icon in the gutter.
 public class Main {
 
-    public static void definitionLeadYear(int desiredYear) {
+    public static void definesLeapYear(int desiredYear) {
         if (desiredYear % 4 == 0 && desiredYear % 100 != 0 || desiredYear % 400 == 0){
             System.out.println(desiredYear + " год - високосный год");
         } else {
@@ -10,14 +10,14 @@ public class Main {
         }
     }
 
-    public static void determinationVersionSystem(int currentYear, int operatingSystem) {
-        if (currentYear == 0 && operatingSystem < 2015) {
+    public static void determinesTheSystemVersion(int currentYear, int operatingSystem) {
+        if (operatingSystem == 0 && currentYear < 2015) {
             System.out.println("Установите облегченную версию приложения для IOS по ссылке");
-        } else if (currentYear == 0 && operatingSystem >= 2015) {
+        } else if (operatingSystem == 0 && currentYear >= 2015) {
             System.out.println("Установите версию приложения для IOS по ссылке");
-        } else if (currentYear == 1 && operatingSystem < 2015) {
+        } else if (operatingSystem == 1 && currentYear < 2015) {
             System.out.println("Установите облегченную версию для Android по ссылке");
-        } else if (currentYear == 1 && operatingSystem >= 2015) {
+        } else if (operatingSystem == 1 && currentYear >= 2015) {
             System.out.println("Установите версию приложения для Android по ссылке");
         }
     }
@@ -48,13 +48,14 @@ public class Main {
 
     public static void task1() {
         int desiredYear = 2025;
-        definitionLeadYear(desiredYear);
+        definesLeapYear(desiredYear);
     }
 
     public static void task2() {
-        int operatingSystem = 0;
-        int currentYear = 2021;
-        determinationVersionSystem(operatingSystem, currentYear);
+        int operatingSystem = 1;
+        int currentYear = 2011;
+        determinesTheSystemVersion(currentYear, operatingSystem);
+
     }
 
     public static void task3() {
